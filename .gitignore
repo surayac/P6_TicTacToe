@@ -1,0 +1,10 @@
+# compilados
+*.class
+
+# Configuración de IDE
+.vscode/
+.idea/
+*.iml
+
+# temporales
+*.log

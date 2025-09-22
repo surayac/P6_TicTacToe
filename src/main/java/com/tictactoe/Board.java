@@ -7,7 +7,7 @@ public class Board {
             { ' ', ' ', ' ' }
     };
 
-       public void printBoard(board) {
+    public void printBoard() {
         System.out.println("Tablero vacío:");
         for (int i = 0; i < 3; i++) {
             System.out.println("-------------");
@@ -19,4 +19,4 @@ public class Board {
         }
         System.out.println("-------------");
     }
-}
+};
