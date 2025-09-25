@@ -36,7 +36,7 @@ public class Game {
                     current = (current == playerX) ? playerO : playerX;
                 }
             } else {
-                System.out.println("Casilla ocupada, intenta otra vez.");
+                System.out.println("Esta casilla está ocupada, intenta otra vez.");
             }
         }
     }

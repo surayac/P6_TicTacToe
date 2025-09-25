@@ -15,8 +15,8 @@ public class Player {
     }
 
     public int[] playerTurn() {
-        System.out.println("Turno: " + symbol);
-        System.out.print("Selecciona una fila y una columna: ");
+        System.out.println("\nTurno: " + symbol);
+        System.out.print("\nSelecciona una fila y una columna: ");
         int row = scanner.nextInt();
         int col = scanner.nextInt();
         return new int[] { row, col };
