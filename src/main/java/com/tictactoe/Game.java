@@ -4,6 +4,10 @@ public class Game {
     private Board board;
     private Player playerX;
     private Player playerO;
+    public static final String GREEN = "\u001B[32m";
+    public static final String YELLOW = "\u001B[33m";
+    public static final String RED = "\u001B[31m";
+    public static final String RESET = "\033[0m";
 
     public Game(Board board, Player playerX, Player playerO) {
         this.board = board;
@@ -26,17 +30,17 @@ public class Game {
 
                 if (board.hasWinner(current.getSymbol())) {
                     board.printBoard();
-                    System.out.println("¡Jugador " + current.getSymbol() + " gana!");
+                    System.out.println(GREEN + "¡Jugador " + current.getSymbol() + " gana!" + RESET);
                     playing = false;
                 } else if (board.isFull()) {
                     board.printBoard();
-                    System.out.println("¡Empate!");
+                    System.out.println(RED + "¡Empate!" + RESET);
                     playing = false;
                 } else {
                     current = (current == playerX) ? playerO : playerX;
                 }
             } else {
-                System.out.println("Esta casilla está ocupada, intenta otra vez.");
+                System.out.println(YELLOW + "Esta casilla está ocupada, intenta otra vez." + RESET);
             }
         }
     }
