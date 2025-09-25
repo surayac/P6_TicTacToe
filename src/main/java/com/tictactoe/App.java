@@ -9,10 +9,9 @@ public class App {
         Board board = new Board();
         board.printBoard();
 
-       Player playerX = new Player('X', scanner);
-       Player playerO = new Player('O', scanner);
+        Player playerX = new Player('X', scanner);
+        Player playerO = new Player('O', scanner);
 
-       
         scanner.close();
     }
 }

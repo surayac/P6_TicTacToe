@@ -1,15 +1,14 @@
 package com.tictactoe;
 
 public class Board {
-    char[][] board;
+    private char[][] board;
 
     public Board() {
         board = new char[3][3];
         clear();
-
     }
 
-    private void clear() {
+    public void clear() {
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
                 board[i][j] = ' ';
@@ -25,5 +24,13 @@ public class Board {
             }
             System.out.println();
         }
+    }
+
+    public boolean placeMove(int line, int column, char player) {
+        if (board[line][column] == ' ') {
+            board[line][column] = player;
+            return true;
+        }
+            return false;
     }
 };
