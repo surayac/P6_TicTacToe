@@ -21,7 +21,7 @@ public class Game {
             int row = move[0];
             int col = move[1];
 
-            if (board.isCellEmpty(row, col)) {
+            if (board.isEmpty(row, col)) {
                 board.placeMark(row, col, current.getSymbol());
 
                 if (board.hasWinner(current.getSymbol())) {
