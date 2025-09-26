@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Player {
     private String color;
+    public static final String YELLOW = "\u001B[33m";
     public static final String RESET = "\033[0m";
 
     private char symbol;
@@ -29,8 +30,8 @@ public class Player {
     }
 
     public int[] playerTurn() {
-        System.out.println(color + "\nTurno: " + symbol + RESET);
-        System.out.print("\nSelecciona una fila y una columna: ");
+        System.out.println(color +"\nTurno: " + symbol + RESET);
+        System.out.print(YELLOW + "\nSelecciona una fila y una columna: " + RESET);
         int row = scanner.nextInt();
         int col = scanner.nextInt();
         return new int[] { row, col };
