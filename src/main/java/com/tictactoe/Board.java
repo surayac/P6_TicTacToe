@@ -27,6 +27,7 @@ public class Board {
     }*/
     
     //Para colorear según símbolo
+    
     public void printBoardColored(String colorX, String colorO) {
         for (int i = 0; i < 3; i++) {
             System.out.print("\t");

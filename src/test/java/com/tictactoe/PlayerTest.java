@@ -29,6 +29,7 @@ public class PlayerTest {
     void testGetSymbol_to_check_if_symbol_is_assignated_to_player() {
         assertEquals('X', player.getSymbol());
     }
+<<<<<<< HEAD
 
     @Test
     void testGetColor_to_check_playerX_color() {
@@ -47,3 +48,15 @@ public class PlayerTest {
         assertEquals("\033[0;36m", playerO.getColor());
     }
 }
+=======
+    @Test 
+    void testGetColor() {
+        Scanner fakeScanner = new Scanner ("");
+        Player player = new Player('X', fakeScanner);
+
+        String color = player.getColor();
+
+        assertEquals("\033[0;35m", color);
+    }
+}
+>>>>>>> e183fd556c484b57fd0967eb81e013988af0ab61

@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.tictactoe.PlayerTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 s -- in com.tictactoe.PlayerTest
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.608 s -- in com.tictactoe.PlayerTest
+>>>>>>> e183fd556c484b57fd0967eb81e013988af0ab61
