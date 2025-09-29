@@ -20,7 +20,6 @@ public class Game {
         boolean playing = true;
         Player current = playerX;
 
-        // Imprimir tablero inicial una sola vez.
         board.printBoardColored(playerX.getColor(), playerO.getColor());
 
         while (playing) {
@@ -31,19 +30,18 @@ public class Game {
 
             if (board.isEmpty(row, col)) {
                 board.placeMark(row, col, current.getSymbol());
-                // Muestra el tablero tras la jugada
                 board.printBoardColored(playerX.getColor(), playerO.getColor());
 
                 if (board.hasWinner(current.getSymbol())) {
-                    // ya no board.printBoard();
                     System.out.println(GREEN + "¡Jugador " + current.getSymbol() + " gana!" + RESET);
                     Player loser = (current == playerX) ? playerO : playerX;
                     System.out.println(RED + "Jugador " + loser.getSymbol() + " pierde." + RESET);
                     playing = false;
+
                 } else if (board.isFull()) {
-                    // ya no board.printBoard();
                     System.out.println(RED + "¡Empate!" + RESET);
                     playing = false;
+                    
                 } else {
                     current = (current == playerX) ? playerO : playerX;
                 }
