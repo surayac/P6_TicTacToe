@@ -37,7 +37,7 @@ public class Game {
                    //ya no  board.printBoard();
                     System.out.println(GREEN + "¡Jugador " + current.getSymbol() + " gana!" + RESET);
                     Player loser  = (current == playerX) ? playerO: playerX ;
-                    System.out.println(RED + "Jugador " + loser.getSymbol() + "pierde." + RESET);
+                    System.out.println(RED + "Jugador " + loser.getSymbol() + " pierde." + RESET);
                     playing = false;
                 } else if (board.isFull()) {
                    //ya no board.printBoard();

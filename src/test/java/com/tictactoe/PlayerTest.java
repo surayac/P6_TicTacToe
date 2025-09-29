@@ -17,5 +17,13 @@ public class PlayerTest {
     
         assertEquals('X', symbol, "Symbol should be X");
     }
-    
+    @Test 
+    void testGetColor() {
+        Scanner fakeScanner = new Scanner ("");
+        Player player = new Player('X', fakeScanner);
+
+        String color = player.getColor();
+
+        assertEquals("\033[0;35m", color);
+    }
 }
