@@ -15,7 +15,7 @@ public class BoardTest {
     }
 
     @Test
-    void testShould_Return_True_When_Line_Is_Filled() {
+    void testShould_Return_True_When_Column_Is_Filled() {
         board.placeMark(0, 1, 'O');
         board.placeMark(1, 1, 'O');
         board.placeMark(2, 1, 'O');
@@ -24,6 +24,12 @@ public class BoardTest {
     }
 
     @Test
-    void testShould_Return_True_When_Column_Is_Filled() {}
+    void testShould_Return_True_When_Line_Is_Filled() {
+        board.placeMark(0, 0, 'X');
+        board.placeMark(0, 1, 'X');
+        board.placeMark(0, 2, 'X');
+
+        assertTrue(board.hasWinner('X'));
+    }
 
 }

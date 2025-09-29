@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tictactoe.PlayerTest" time="0.15" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tictactoe.BoardTest" time="0.228" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,13 +58,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetColor_to_check_playerX_color" classname="com.tictactoe.PlayerTest" time="0.044"/>
-  <testcase name="testGetSymbol_to_check_if_symbol_is_assignated_to_player" classname="com.tictactoe.PlayerTest" time="0.014"/>
-  <testcase name="testPlayerOColor" classname="com.tictactoe.PlayerTest" time="0.007"/>
-  <testcase name="testPlayerTurn" classname="com.tictactoe.PlayerTest" time="0.051">
-    <system-out><![CDATA[&amp#27;[0;35m
-Turno: X&amp#27;[0m
-&amp#27;[33m
-Selecciona una fila y una columna (0-2, ej.: 1 1): &amp#27;[0m]]></system-out>
-  </testcase>
+  <testcase name="testShould_Return_True_When_Column_Is_Filled" classname="com.tictactoe.BoardTest" time="0.155"/>
+  <testcase name="testShould_Return_True_When_Line_Is_Filled" classname="com.tictactoe.BoardTest" time="0.003"/>
 </testsuite>
