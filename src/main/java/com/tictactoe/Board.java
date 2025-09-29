@@ -2,7 +2,6 @@ package com.tictactoe;
 
 public class Board {
     private char[][] board;
-    //Aquí agrego el reset
     public static final String RESET = "\033[0m";
 
     public Board() {
@@ -16,18 +15,6 @@ public class Board {
                 board[i][j] = '_';
     }
 
-    /* public void printBoard() {
-        for (int i = 0; i < 3; i++) {
-            System.out.print("\t");
-            for (int j = 0; j < 3; j++) {
-                System.out.print(board[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }*/
-    
-    //Para colorear según símbolo
-    
     public void printBoardColored(String colorX, String colorO) {
         for (int i = 0; i < 3; i++) {
             System.out.print("\t");
@@ -39,7 +26,7 @@ public class Board {
                 } else if (c == 'O') {
                     toPrint = colorO + 'O' + RESET;
                 } else {
-                    toPrint = String.valueOf(c); // '_' sin color
+                    toPrint = String.valueOf(c);
                 }
                 System.out.print(toPrint + " ");
             }

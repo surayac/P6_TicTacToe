@@ -4,6 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Scanner;
@@ -29,13 +30,20 @@ public class PlayerTest {
         assertEquals('X', player.getSymbol());
     }
 
-    @Test 
-    void testGetColor() {
-        Scanner fakeScanner = new Scanner ("");
-        Player player = new Player('X', fakeScanner);
+    @Test
+    void testGetColor_to_check_playerX_color() {
+        assertEquals("\033[0;35m", player.getColor());
+    }
 
-        String color = player.getColor();
+    @Test
+    void testPlayerTurn() {
+        assertArrayEquals(new int[] { 1, 2 }, player.playerTurn());
+    }
 
-        assertEquals("\033[0;35m", color);
+    @Test
+    void testPlayerOColor() {
+        Player playerO = new Player('O', new Scanner("0\n0\n"));
+        assertEquals('O', playerO.getSymbol());
+        assertEquals("\033[0;36m", playerO.getColor());
     }
 }

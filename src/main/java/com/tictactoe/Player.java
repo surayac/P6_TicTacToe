@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Player {
     private String color;
     public static final String YELLOW = "\u001B[33m";
+      public static final String BRIGHT_RED = "\u001B[91m";
     public static final String RESET = "\033[0m";
 
     private char symbol;
@@ -30,10 +31,28 @@ public class Player {
     }
 
     public int[] playerTurn() {
-        System.out.println(color +"\nTurno: " + symbol + RESET);
-        System.out.print(YELLOW + "\nSelecciona una fila y una columna: " + RESET);
-        int row = scanner.nextInt();
-        int col = scanner.nextInt();
+       int row, col;
+
+        do {
+            try {
+                System.out.println(color + "\nTurno: " + symbol + RESET);
+                System.out.print(YELLOW + "\nSelecciona una fila y una columna (0-2, ej.: 1 1): " + RESET);
+                row = scanner.nextInt();
+                col = scanner.nextInt();
+
+                // incluyendo codigo
+                if (row >= 0 && row <= 2 && col >= 0 && col <= 2)
+                    break;
+                System.out.println(BRIGHT_RED + "Error: los números deben estar entre 0 y 2." + RESET);
+            
+            } catch (java.util.InputMismatchException e) {
+                System.out.println(BRIGHT_RED + "Error: debes ingresar números enteros." + RESET);
+                scanner.nextLine(); // limpiar buffer
+                row = -1;
+                col = -1; // asegurar que vuelva a pedir
+            }
+
+        } while (true);
         return new int[] { row, col };
     }
 }
