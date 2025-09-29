@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tictactoe.PlayerTest" time="0.082" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.tictactoe.PlayerTest" time="0.129" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\suray\AppData\Local\Temp\surefire3249557165969591939\surefirebooter-20250926085804266_3.jar C:\Users\suray\AppData\Local\Temp\surefire3249557165969591939 2025-09-26T08-58-03_990-jvmRun1 surefire-20250926085804266_1tmp surefire_0-20250926085804266_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\suray\AppData\Local\Temp\surefire3838528142407834213\surefirebooter-20250929101511616_3.jar C:\Users\suray\AppData\Local\Temp\surefire3838528142407834213 2025-09-29T10-15-11_319-jvmRun1 surefire-20250929101511616_1tmp surefire_0-20250929101511616_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\suray\Documents\CURSOS\FemCoders\PROYECTOS\tictactoe\target\test-classes;C:\Users\suray\Documents\CURSOS\FemCoders\PROYECTOS\tictactoe\target\classes;C:\Users\suray\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\suray\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\suray\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\suray\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\suray\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\suray\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\suray\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\suray\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\suray\AppData\Local\Temp\surefire3249557165969591939\surefirebooter-20250926085804266_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\suray\AppData\Local\Temp\surefire3838528142407834213\surefirebooter-20250929101511616_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.8+12-LTS-250"/>
@@ -58,5 +58,13 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetSymbol" classname="com.tictactoe.PlayerTest" time="0.044"/>
+  <testcase name="testGetColor_to_check_playerX_color" classname="com.tictactoe.PlayerTest" time="0.047"/>
+  <testcase name="testGetSymbol_to_check_if_symbol_is_assignated_to_player" classname="com.tictactoe.PlayerTest" time="0.004"/>
+  <testcase name="testPlayerOColor" classname="com.tictactoe.PlayerTest" time="0.006"/>
+  <testcase name="testPlayerTurn" classname="com.tictactoe.PlayerTest" time="0.031">
+    <system-out><![CDATA[&amp#27;[0;35m
+Turno: X&amp#27;[0m
+&amp#27;[33m
+Selecciona una fila y una columna: &amp#27;[0m]]></system-out>
+  </testcase>
 </testsuite>
